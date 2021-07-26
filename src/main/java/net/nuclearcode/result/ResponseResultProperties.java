@@ -1,4 +1,4 @@
-package nucleardata.net.result;
+package net.nuclearcode.result;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;

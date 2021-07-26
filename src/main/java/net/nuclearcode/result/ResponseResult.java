@@ -1,4 +1,4 @@
-package nucleardata.net.result;
+package net.nuclearcode.result;
 
 import java.io.Serializable;
 import lombok.Getter;
