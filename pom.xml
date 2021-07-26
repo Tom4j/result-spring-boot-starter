@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>net.nucleardata</groupId>
 	<artifactId>result-spring-boot-starter</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>result-spring-boot-starter</name>
 	<description>result-spring-boot-starter</description>
 	<properties>
