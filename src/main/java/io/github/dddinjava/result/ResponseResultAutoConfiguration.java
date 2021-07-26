@@ -10,5 +10,5 @@ import org.springframework.context.annotation.Configuration;
  * @date 2021年7月26日 13点06分
  */
 @Configuration
-@ComponentScan(basePackages = {"net.nuclearcode.result.aop"})
+@ComponentScan(basePackages = {"io.github.dddinjava.result.aop"})
 public class ResponseResultAutoConfiguration {}
