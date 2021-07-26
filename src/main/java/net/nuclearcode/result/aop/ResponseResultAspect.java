@@ -20,7 +20,7 @@ public class ResponseResultAspect {
   /**
    * 定义@ResponseResult的切点
    */
-  @Pointcut("@annotation(net.nuclearcode.result.annotation.ResponseResult)")
+  @Pointcut("@annotation(net.nuclearcode.result.annotation.RespResult)")
   public void responseResult() {}
 
   /**
@@ -29,7 +29,7 @@ public class ResponseResultAspect {
    * @return responseResult
    */
   @Around("responseResult()")
-  public ResponseResult<?> doAround(ProceedingJoinPoint joinPoint) {
+  public Object doAround(ProceedingJoinPoint joinPoint) {
     Object proceed = null;
     try {
       proceed = joinPoint.proceed();
@@ -37,7 +37,7 @@ public class ResponseResultAspect {
       throwable.printStackTrace();
     }
     if (proceed instanceof ResponseResult) {
-      return (ResponseResult<?>) proceed;
+      return proceed;
     }
 
     return ResponseResult.build(proceed).success();

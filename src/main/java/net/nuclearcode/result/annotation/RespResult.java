@@ -14,7 +14,7 @@ import java.lang.annotation.Target;
 @Documented
 @Target({ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface ResponseResult {
+public @interface RespResult {
 
   /**
    * 默认消息
