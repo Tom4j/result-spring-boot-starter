@@ -1,4 +1,4 @@
-package net.nuclearcode.result;
+package io.github.dddinjava.result;
 
 import lombok.Getter;
 

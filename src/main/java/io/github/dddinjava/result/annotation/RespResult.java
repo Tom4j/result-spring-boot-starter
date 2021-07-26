@@ -1,4 +1,4 @@
-package net.nuclearcode.result.annotation;
+package io.github.dddinjava.result.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

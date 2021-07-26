@@ -1,7 +1,7 @@
-package net.nuclearcode.result.aop;
+package io.github.dddinjava.result.aop;
 
-import net.nuclearcode.result.ResponseResult;
-import net.nuclearcode.result.annotation.RespResult;
+import io.github.dddinjava.result.annotation.RespResult;
+import io.github.dddinjava.result.ResponseResult;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -22,7 +22,7 @@ public class ResponseResultAspect {
   /**
    * 定义@ResponseResult的切点
    */
-  @Pointcut("@annotation(net.nuclearcode.result.annotation.RespResult)")
+  @Pointcut("@annotation(io.github.dddinjava.result.annotation.RespResult)")
   public void responseResult() {}
 
   /**
