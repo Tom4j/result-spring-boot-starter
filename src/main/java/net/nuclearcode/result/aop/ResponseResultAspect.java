@@ -1,11 +1,13 @@
 package net.nuclearcode.result.aop;
 
 import net.nuclearcode.result.ResponseResult;
+import net.nuclearcode.result.annotation.RespResult;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
 
 /**
  * aop解析注解
@@ -25,11 +27,12 @@ public class ResponseResultAspect {
 
   /**
    * doAround获取controller返回的值
+   *
    * @param joinPoint joinPoint
    * @return responseResult
    */
-  @Around("responseResult()")
-  public Object doAround(ProceedingJoinPoint joinPoint) {
+  @Around("responseResult() && @annotation(respResult)")
+  public Object doAround(ProceedingJoinPoint joinPoint, RespResult respResult) {
     Object proceed = null;
     try {
       proceed = joinPoint.proceed();
@@ -40,6 +43,12 @@ public class ResponseResultAspect {
       return proceed;
     }
 
+    // message
+    String message = respResult.message();
+
+    if (StringUtils.hasLength(message)) {
+      return ResponseResult.build(message, proceed).success();
+    }
     return ResponseResult.build(proceed).success();
   }
 }
