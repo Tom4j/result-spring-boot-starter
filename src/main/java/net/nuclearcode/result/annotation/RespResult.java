@@ -19,6 +19,6 @@ public @interface RespResult {
   /**
    * 默认消息
    */
-  String message();
+  String message() default "";
 
 }
