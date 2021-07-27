@@ -34,7 +34,7 @@ maven坐标：
 		<dependency>
 			<groupId>io.github.dddinjava</groupId>
 			<artifactId>result-spring-boot-starter</artifactId>
-			<version>1.0.0</version>
+			<version>1.0.1</version>
 		</dependency>
 - 使用
 
