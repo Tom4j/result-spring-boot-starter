@@ -2,6 +2,7 @@ package io.github.dddinjava.result;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 
 /**
  * 自动配置类
@@ -9,5 +10,6 @@ import org.springframework.context.annotation.Configuration;
  * @author zhaoxin
  */
 @Configuration
-@ComponentScan(basePackages = {"io.github.dddinjava.result.aop", "io.github.dddinjava.result.advice"})
+@ComponentScan(basePackages = {"io.github.dddinjava.result.aop"})
+@Import(GlobalExceptionAutoConfiguration.class)
 public class ResponseResultAutoConfiguration {}

@@ -91,4 +91,11 @@ maven坐标：
     return ResponseResult.build("aaa").success();
   }
 ```
+## 加入全局异常捕捉 ##
+
+开启方式:
+
+    spring.result.ex.enabled=true
+
+
 
