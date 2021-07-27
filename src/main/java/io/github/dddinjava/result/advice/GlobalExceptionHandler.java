@@ -5,8 +5,8 @@ import io.github.dddinjava.result.ResponseResultEnum;
 import lombok.extern.java.Log;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 /**
  * 全局异常处理
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
  * @author zhaoxin
  */
 @Log
-@ControllerAdvice
+@RestControllerAdvice
 @ConditionalOnProperty(prefix = "spring.result.ex", value = "enabled", matchIfMissing = true)
 public class GlobalExceptionHandler {
 
