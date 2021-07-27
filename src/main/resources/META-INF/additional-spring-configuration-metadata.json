@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "spring.result.ex.enabled",
+      "type": "java.lang.String",
+      "description": "开启ResponseResult的全局异常拦截"
+  }
+] }
