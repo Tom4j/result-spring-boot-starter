@@ -9,7 +9,6 @@ import org.springframework.util.StringUtils;
  * 统一返回result对象
  *
  * @author zhaoxin
- * @date 2021年7月26日 13点37分
  */
 @Getter
 @ToString

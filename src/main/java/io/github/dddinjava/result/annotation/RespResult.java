@@ -8,17 +8,14 @@ import java.lang.annotation.Target;
 
 /**
  * 自定义@ResponseResult注解
+ *
  * @author zhaoxin
- * @date 2021年7月26日 15点51分
  */
 @Documented
 @Target({ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface RespResult {
 
-  /**
-   * 默认消息
-   */
+  /** 默认消息 */
   String message() default "";
-
 }

@@ -13,15 +13,12 @@ import org.springframework.util.StringUtils;
  * aop解析注解
  *
  * @author zhaoxin
- * @date 2021年7月26日 15点48分
  */
 @Aspect
 @Component
 public class ResponseResultAspect {
 
-  /**
-   * 定义@ResponseResult的切点
-   */
+  /** 定义@ResponseResult的切点 */
   @Pointcut("@annotation(io.github.dddinjava.result.annotation.RespResult)")
   public void responseResult() {}
 

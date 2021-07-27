@@ -6,7 +6,6 @@ import lombok.Getter;
  * ResponseResult-code 状态码
  *
  * @author zhaoxin
- * @date 2021年7月26日 13点16分
  */
 @Getter
 public enum ResponseResultEnum {
