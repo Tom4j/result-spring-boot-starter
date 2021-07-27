@@ -3,7 +3,6 @@ package io.github.dddinjava.result.advice;
 import io.github.dddinjava.result.ResponseResult;
 import io.github.dddinjava.result.ResponseResultEnum;
 import lombok.extern.java.Log;
-import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -15,7 +14,6 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
  */
 @Log
 @RestControllerAdvice
-@Component
 public class GlobalExceptionHandler {
 
   /**
