@@ -29,13 +29,9 @@ public class ResponseResultAspect {
    * @return responseResult
    */
   @Around("responseResult() && @annotation(respResult)")
-  public Object doAround(ProceedingJoinPoint joinPoint, RespResult respResult) {
-    Object proceed = null;
-    try {
-      proceed = joinPoint.proceed();
-    } catch (Throwable throwable) {
-      throwable.printStackTrace();
-    }
+  public Object doAround(ProceedingJoinPoint joinPoint, RespResult respResult) throws Throwable {
+    Object proceed = joinPoint.proceed();
+
     if (proceed instanceof ResponseResult) {
       return proceed;
     }

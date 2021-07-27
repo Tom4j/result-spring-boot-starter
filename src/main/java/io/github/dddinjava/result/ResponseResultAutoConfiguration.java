@@ -9,5 +9,5 @@ import org.springframework.context.annotation.Configuration;
  * @author zhaoxin
  */
 @Configuration
-@ComponentScan(basePackages = {"io.github.dddinjava.result.aop"})
+@ComponentScan(basePackages = {"io.github.dddinjava.result.aop", "io.github.dddinjava.result.advice"})
 public class ResponseResultAutoConfiguration {}
